@@ -95,16 +95,16 @@ public class Main {
      */
     public static Session readSession(File rootDirectory, JAXBContext jaxb)throws JAXBException {
         
-    	File dateName = new File("input\\memphis\\08-08-2016");
-    	File instructorContactFile = new File("input\\memphis\\08-08-2016\\instructor.xml");
-    	File studentDirectory = new File("input\\memphis\\08-08-2016\\students");
+//    	File dateName = new File("input\\memphis\\08-08-2016");
+//    	File instructorContactFile = new File("input\\memphis\\08-08-2016\\instructor.xml");
+//    	File studentDirectory = new File("input\\memphis\\08-08-2016\\students");
     	
     	Session sess = new Session();
     	
     	sess.setLocation(rootDirectory.getName());
-    	sess.setStartDate(dateName.getName());
-    	sess.setInstructor(readInstructor(instructorContactFile, jaxb));
-    	sess.setStudents(readStudents(studentDirectory, jaxb));
+    	sess.setStartDate((new File("input\\memphis\\08-08-2016")).getName());
+    	sess.setInstructor(readInstructor(new File("input\\memphis\\08-08-2016\\instructor.xml"), jaxb));
+    	sess.setStudents(readStudents(new File("input\\memphis\\08-08-2016\\students"), jaxb));
     	
     	return sess;
     }

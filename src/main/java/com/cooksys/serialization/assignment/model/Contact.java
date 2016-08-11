@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlAccessType;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Contact {
-	@XmlAttribute(name = "first name")
+	@XmlAttribute(name = "first-name")
     private String firstName;
-	@XmlAttribute(name = "last name")
+	@XmlAttribute(name = "last-name")
     private String lastName;
     private String email;
     private String phoneNumber;
